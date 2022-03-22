@@ -2,12 +2,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bootcamp-python
-  namespace: test
+  name: pythonapp
+  namespace: nonprod
 spec:
   selector:
     matchLabels:
-      app: bootcamp-python
+      app: pythonapp
   replicas: 1
   strategy:
     type: RollingUpdate
@@ -17,10 +17,10 @@ spec:
   template:
     metadata:
       labels:
-        app: bootcamp-python
+        app: pythonapp
     spec:
       containers:
-      - name: bootcamp-python
-        image: aliserkantasci/python:v$DOCKER_BUILD_NUMBER
+      - name: pythonapp
+        image: ecemozer/pythonapp:v$DOCKER_BUILD_NUMBER
         ports:
         - containerPort: 5000
