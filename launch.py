@@ -5,15 +5,15 @@ helloworld = Flask(__name__)
 data = {
   "users": [
     {
-      "username": "serkan",
+      "username": "Ecem",
       "mail": "test2@test2.com"
     },
     {
-      "username": "tasci",
+      "username": "Ozer",
       "mail": "test1@test1.com"
     },
     {
-      "status": "DevOps Engineer",
+      "status": "Jr. DevOps Engineer",
       "source": "test@test.com"
     }
   ]
